@@ -31,5 +31,5 @@
 * **High-Precision Latency Telemetry:** Micro-benchmarking hot paths via `time.perf_counter()` to isolate and **purge Python dispatch overhead**, reaching deterministic **C++ hardware latency**.
 
 ### Certifications & Academic Base
-* **Academic/Industry Base:** [Scientific Computing Architecture](https://freecodecamp.org](https://www.freecodecamp.org/certification/maximanisimov/python-v9))
+* **Academic/Industry Base:** [Python Developer](https://freecodecamp.org](https://www.freecodecamp.org/certification/maximanisimov/python-v9))
 
