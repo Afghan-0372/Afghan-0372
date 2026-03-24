@@ -6,7 +6,7 @@
 ![CUDA](https://img.shields.io/badge/CUDA-12.x-red)
 ![C++](https://img.shields.io/badge/C%2B%2B-17-blue)
 ![LLVM](https://img.shields.io/badge/LLVM-IR-purple)
-![Assembly](https://img.shields.io/badge/ASM-x86_64-gray)
+![Assembly](https://img.shields.io/badge/ASM-x86_64-red)
 
 > "Python is just a remote control for LLVM kernels."
 
