@@ -8,7 +8,7 @@
 ![LLVM](https://img.shields.io/badge/LLVM-IR-purple)
 ![Assembly](https://img.shields.io/badge/ASM-x86_64-red)
 
-> "Python is just a remote control for LLVM kernels."
+> **Philosophy:** Python is a remote control for LLVM kernels. Zero overhead in hot paths.
 
 ## Technical Stack (Strictly Typed & Pre-allocated)
 *   **Compute:** Numba (@njit, @parallel), NumPy (Structured Arrays, memmap), CUDA (PyCUDA).
@@ -17,10 +17,10 @@
 *   **Architecture:** C/Fortran memory layout (`order='C'`/`F`), Manual Memory Management, LLVM IR Inspection.
 
 ### Performance Credentials
-* 🎓 [Scientific Computing with Python (freeCodeCamp)]([https://freecodecamp.org](https://freecodecamp.org/certification/maximanisimov/python-v9))
-*   🔥 **Focus**: Eliminating Python Object Overhead in Data Pipelines.
-*   ⚡ **Profiling:** `cProfile`, `line_profiler`, `numba.cuda.profiler`, `valgrind/memcheck`.
-*   📊 **Benchmarking:** Micro-benchmarking with `time.perf_counter()`, latency measurement, and memory profiling (`tracemalloc`).
+*   [Scientific Computing with Python](https://freecodecamp.org/certification/maximanisimov/python-v9) | freeCodeCamp
+*   **Focus**: Eliminating Python Object Overhead in Data Pipelines.
+*   **Profiling:** `cProfile`, `line_profiler`, `numba.cuda.profiler`, `valgrind/memcheck`.
+*   **Benchmarking:** Micro-benchmarking with `time.perf_counter()`, latency measurement, and memory profiling (`tracemalloc`).
 
 ## System Principles:
 1.  **NO** dynamic lists or dicts in hot loops.
