@@ -22,10 +22,24 @@
 *   **Profiling:** `cProfile`, `line_profiler`, `numba.cuda.profiler`, `valgrind/memcheck`.
 *   **Benchmarking:** Micro-benchmarking with `time.perf_counter()`, latency measurement, and memory profiling (`tracemalloc`).
 
-## System Principles:
-1.  **NO** dynamic lists or dicts in hot loops.
-2.  **NO** `append()` calls. Buffers are pre-allocated at `t=0`.
-3.  **ONLY** Numba-compiled functions for critical paths.
-4.  **STRICT TYPE INFERENCE:** No `Any` types inside JIT scopes; explicit `dtype` declarations to prevent runtime type checks.
-5.  **NO BRANCH MISPREDICTIONS:** Use arithmetic masking or conditional moves instead of `if/else` inside critical loops.
-6.  **CONTIGUOUS MEMORY ACCESS:** All data passed to kernels must be C-contiguous (`order='C'`) unless explicit strides are calculated manually.
+🚀 System Principles: The Zero-Overhead Architecture
+"Python is the glue; Numba/LLVM is the engine. We build engines that run at C speed."
+
+HOT PATH SANITIZATION:
+
+Prohibition of Dynamic Allocation: Strict ban on list.append(), dicts, and object creation inside JIT scopes.
+Immutable Buffers: All working sets are pre-allocated at t=0 with fixed capacity to eliminate heap fragmentation overhead.
+STRICT TYPE SIGNATURES (LLVM IR Level):
+
+Zero Runtime Dispatch: Explicit dtype declarations (np.float64, np.int32) prevent the JIT compiler from generating type-checking bytecode.
+No Any: Eliminates dynamic typing overhead, forcing the compiler to generate pure machine code (x86_64/AVX-512).
+BRANCH ELIMINATION & PREDICTION OPTIMIZATION:
+
+Deterministic Control Flow: Critical loops use arithmetic masking or conditional moves (cmov) instead of if/else to ensure perfect branch prediction and enable full SIMD vectorization (SSE/AVX).
+MEMORY CONTIGUITY & CACHE HIERARCHY:
+
+Stride-1 Access Guarantee: All data passed to kernels is C-contiguous (order='C') or manually stride-calculated to ensure sequential memory access.
+Cache Line Alignment: Data structures are padded to 64-byte boundaries (L1 cache line) to maximize spatial locality and throughput.
+ARCHITECTURAL ABSTRACTION LAYER:
+Python acts strictly as a Remote Control. All heavy lifting is offloaded to compiled kernels (@njit, PyCUDA). No Python objects traverse the boundary between interpreter and kernel.
+
