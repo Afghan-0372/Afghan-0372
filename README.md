@@ -34,5 +34,5 @@
 * **NVIDIA Training:** CUDA-Accelerated Computing & Numba (GPU Kernel Saturation).
 * **Intel HPC Curricula:** Micro-architecture optimization, AVX-512, and Cache-Line tuning.
 * **MIT OpenCourseWare:** Performance Engineering (6.172) — Mastery of Software-Hardware Synergy.
-![Python Developer Certificate](https://freecodecamp.org](https://www.freecodecamp.org/certification/maximanisimov/python-v9))
+* [Python Developer Certificate](https://freecodecamp.org](https://www.freecodecamp.org/certification/maximanisimov/python-v9))
 
