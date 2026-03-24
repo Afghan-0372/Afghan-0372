@@ -9,13 +9,14 @@
 ![CUDA](https://img.shields.io/badge/CUDA-12.x-red)
 ![LLVM](https://img.shields.io/badge/LLVM-IR-purple)
 
-> **"Turning Python into a low-level tool: I use LLVM and strong typing to eliminate interpreter overhead, reaching C++-level latency and 100% hardware utilization."**
+> **"Turning Python into a low-level tool: I use LLVM and strong typing to eliminate interpreter overhead, reaching C++ level latency and 100% hardware utilization."**
 
 ### Low-Level Optimization & ASM Refinement
-*   **JUMP Elimination:** Manual inspection of generated **Assembly (ASM)** to identify and eliminate costly `jmp` (branching) instructions. 
-*   **Branchless Arithmetic:** Replacement of `if/else` logic with bitwise masking and conditional moves (`CMOV`) to prevent pipeline stalls and branch mispredictions.
-*   **Aggressive Vectorization:** Forcing **SIMD (AVX-512/AVX2)** utilization through manual **LLVM IR** tuning to ensure the compiler generates packed vector operations instead of scalar loops.
-*   **Instruction Audit:** Constant auditing of the hot path to ensure **Zero-Overhead** execution and optimal IPC (Instructions Per Cycle).
+* **Asm-Level Surgical Refinement:** Manual elimination of `.LBB` jump labels and branch-heavy logic. I replace `if/else` with bitwise masking and `CMOV` to achieve zero-stall execution.
+* **Extreme SIMD Vectorization:** Overriding compiler heuristics to force **AVX-512 (zmm)** and **AVX2 (ymm)** utilization. I hand-tune **LLVM IR** to ensure high-density **Vector Ops** and 100% compute throughput.
+* **Cache-Aware Determinism:** Architecting hot paths with pre-allocation and strict type locking to bypass the Python interpreter and hit raw **C++ hardware latency**.
+* **Instruction Audit:** Continuous verification of **IPC (Instructions Per Cycle)** to guarantee that every clock cycle is spent on computation, not overhead.
+
 
 ## Performance Optimisation: Zero-Overhead Architecture
 
