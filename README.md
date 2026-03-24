@@ -35,18 +35,17 @@
 * **Intel HPC Curricula:** Micro-architecture tuning, manual **AVX-512** vectorization, and L1/L2 cache alignment.
 * **MIT OpenCourseWare (6.172):** Systems Engineering principles — Mastering Software-Hardware Synergy.
 
-### Case Studies / Performance Benchmarks
-## 💎 Case Study: 1200x Speedup in Financial Signal Processing
+### Case Studies / Performance Benchmarks: 1200x Speedup in Financial Signal Processing
 
-### 🚩 The Challenge
+### The Challenge
 Processing 10M+ market ticks with sub-microsecond latency using a Python-based stack. Standard vectorized libraries (NumPy/Pandas) failed due to interpreter overhead and cache-line misalignment.
 
-### 🛠 Engineering Breakthroughs
+### Engineering Breakthroughs
 * **Cache-Locality:** Re-architected memory layout with **64-byte padding** to eliminate False Sharing and maximize L1 hit rate.
 * **SIMD Saturation:** Hand-tuned **LLVM IR** to force **AVX-512 (zmm)** vectorization, achieving 16-way parallel float64 operations per clock cycle.
 * **Branchless Logic:** Purged all `.LBB` jumps in the hot path, replacing conditional logic with bitwise masking to prevent CPU pipeline stalls.
 
-### 📊 Benchmark Results
+### Benchmark Results
 
 | Implementation | Latency (per 1M rows) | Throughput |
 | :--- | :--- | :--- |
