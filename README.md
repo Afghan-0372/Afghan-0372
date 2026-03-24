@@ -1,5 +1,13 @@
 # Maxim Anisimov | HPC & Low-Level Python Specialist
 
+![NumPy](https://img.shields.io/badge/NumPy-1.26+-blue)
+![Numba](https://img.shields.io/badge/Numba-0.59+-green)
+![HPC](https://img.shields.io/badge/HPC-Expert-orange)
+![CUDA](https://img.shields.io/badge/CUDA-12.x-red)
+![C++](https://img.shields.io/badge/C%2B%2B-17-blue)
+![LLVM](https://img.shields.io/badge/LLVM-IR-purple)
+![Assembly](https://img.shields.io/badge/ASM-x86_64-gray)
+
 > "Python is just a remote control for LLVM kernels."
 
 ## Technical Stack (Strictly Typed & Pre-allocated)
