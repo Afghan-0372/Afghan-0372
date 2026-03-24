@@ -11,27 +11,26 @@
 > **Philosophy:** Python is a remote control for LLVM kernels. Zero overhead in hot paths.
 
 ## Low Level Technical Stack (Strictly Typed & Pre-allocated)
-*   **Compute:** Numba (`@njit`, `@parallel`), NumPy (Structured Arrays), CUDA.
+*   **Compute:** Numba (`@njit`, `@parallel`), NumPy (**Structured Arrays**, DType Packing), CUDA.
 *   **Memory:** `ctypes`, `np.memmap`, Cache Line Alignment (64-byte padding).
 *   **Vectorization:** SIMD (AVX-512/AVX2), Stride-1 Access, Branch Elimination.
-*   **Profiling:** `cProfile`, `valgrind`, LLVM IR Inspection.
+*   **Profiling:** `cProfile`, `valgrind`, **LLVM IR Inspection**.
 
 ## Performance Manifesto: Zero-Overhead Architecture
 
 ### 1. Memory Discipline
 *   **Pre-allocation at $t=0$**: Zero use of `list.append()` or dynamic resizing to prevent heap fragmentation.
 *   **Contiguity**: Strict `order='C'` or `order='F'` enforcement for Stride-1 sequential access.
-*   **Memory Barriers**: Manual management of object boundaries to ensure L1/L2 cache locality.
+*   **Memory Barriers**: Manual management of object boundaries; **Optimization verified via LLVM IR inspection** to ensure L1/L2 cache locality.
 
 ### 2. Kernel Optimization
 *   **Type Locking**: Explicit `dtype` signatures to eliminate JIT runtime dispatch.
 *   **Branchless Logic**: Arithmetic masking and conditional moves instead of `if/else` for SIMD-friendly pipelines.
 *   **Interpreter Bypass**: Python acts only as a controller; no Python objects enter the `@njit` scope.
 
-
 ### Performance Credentials
 *   [Scientific Computing with Python](https://freecodecamp.org/certification/maximanisimov/python-v9) | freeCodeCamp
 *   **Focus**: Eliminating Python Object Overhead in Data Pipelines.
 *   **Profiling:** `cProfile`, `line_profiler`, `numba.cuda.profiler`, `valgrind/memcheck`.
 *   **Benchmarking:** Micro-benchmarking with `time.perf_counter()`, latency measurement, and memory profiling (`tracemalloc`).
-
+*   🔍 **LLVM IR Analysis**: Manual inspection of generated assembly to verify vectorization efficiency.
