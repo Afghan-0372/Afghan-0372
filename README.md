@@ -5,7 +5,7 @@
 ![SIMD](https://img.shields.io/badge/SIMD-Branchless%20Logic-red)
 ![AVX512](https://img.shields.io/badge/AVX512-Full%20Width%20Utilization-red)
 ![CUDA](https://img.shields.io/badge/CUDA-12.x-red)
-![LLVM](https://img.shields.io/badge/LLVM-IR-purple)z
+![LLVM](https://img.shields.io/badge/LLVM-IR-purple)
 ![C++](https://img.shields.io/badge/C%2B%2B-17-blue)
 ![C#](https://img.shields.io/badge/C%23-10-blue)
 ![NumPy](https://img.shields.io/badge/NumPy-1.26+-blue)
@@ -47,12 +47,12 @@ Processing 10M+ market ticks with sub-microsecond latency using a Python-based s
 
 ### Benchmark Results
 
-| Implementation | Latency (per 1M txn) |Throughput (txn/sec) | Speedup vs Baseline |
+| Implementation | Latency (per 1M txn) | Throughput (txn/sec) | Speedup vs Baseline |
 | :--- | :--- | :--- | :--- |
-| Pandas & Numpy | 480.0 ms | 2,083 | Baseline |
-| Numba (default) | 12.5 ms | 80,000 | 38x |
-| **My ASM-Optimized Kernel (one core)** | **0.14 ms** | **800,000** | **3,400x** |
-| **My Parallel ASM-Optimized Kernel (SIMD) (16 Cores)** | **0.00086 ms** | 	**1,158,936,559** | **558,000x**
+| Pandas & NumPy | 480.0 ms | 2,083 | Baseline |
+| Numba (Default) | 12.5 ms | 80,000 | 38x |
+| **My ASM-Optimized Kernel (Single Core)** | **0.14 ms** | **7,142,857** | **3,429x** |
+| **My Parallel HPC Kernel (SIMD) (16 Cores)** | **0.00068 ms** | **1,464,501,937** | **~703,000x** |
 
 ### Statistical Analysis
 
