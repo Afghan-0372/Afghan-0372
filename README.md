@@ -92,6 +92,7 @@ Processing 1M+ market ticks with sub-microsecond latency using a Python-based st
 * [Python Developer Certificate](https://www.freecodecamp.org/certification/maximanisimov/python-v9)
 * [Python Data Science](/certificates/Python_Data_science.pdf)
 * [Python Deep Learning](/certificates/Python_Deep_Learning.pdf)
+* [Python Professional](https://www.sololearn.com/certificates/CC-D0O9G48K)
 * [Python Introduction](https://www.sololearn.com/certificates/CC-QCFKR5CH)
 * [Data Analytics with AI](https://www.sololearn.com/certificates/CC-LZH7VRPT)
 
