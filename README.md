@@ -94,7 +94,7 @@ Processing 1M+ market ticks with sub-microsecond latency using a Python-based st
 
 #### Engineering & Strategy
 * [Prompt Engineering Mastery](https://www.sololearn.com/certificates/CC-Y7PFFORM)
-* [Advanced Problem Solving](https://www.hackerrank.com/certificates/029f5b5ab91f)
+* [Professional Problem Solving](https://www.hackerrank.com/certificates/029f5b5ab91f)
 * [Nasa System Engineering](/certificates/NASA_certified.pdf)
 
 #### Languages
