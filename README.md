@@ -83,12 +83,7 @@ Processing 1M+ market ticks with sub-microsecond latency using a Python-based st
 * [C# Foundation](https://www.sololearn.com/certificates/CC-YUS00YF7)
 
 
-#### Data Architecture & SQL
-* [SQL Advanced Optimization](link)
-* [SQL Database Design](link)
-* [SQL Architecture](link)
-* [SQL Administration](link)
-* [SQL for Data Science](link)
+#### Data Architecture
 * [Python Developer Certificate](https://www.freecodecamp.org/certification/maximanisimov/python-v9)
 * [Python Data Science](/certificates/Python_Data_science.pdf)
 * [Python Deep Learning](/certificates/Python_Deep_Learning.pdf)
