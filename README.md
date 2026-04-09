@@ -80,6 +80,7 @@ Processing 1M+ market ticks with sub-microsecond latency using a Python-based st
 * [C Driver Development](link)
 * [C# Microsoft Certified](https://freecodecamp.org/certification/maximanisimov/foundational-c-sharp-with-microsoft)
 * [C# Professional](https://www.sololearn.com/certificates/CC-D7GQNS4N)
+* [C# Basic](https://www.hackerrank.com/certificates/0317ef5a0695)
 * [C# Foundation](https://www.sololearn.com/certificates/CC-YUS00YF7)
 
 
