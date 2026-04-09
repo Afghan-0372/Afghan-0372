@@ -90,6 +90,7 @@ Processing 1M+ market ticks with sub-microsecond latency using a Python-based st
 * [Python Deep Learning](/certificates/Python_Deep_Learning.pdf)
 * [Python Professional](https://www.sololearn.com/certificates/CC-D0O9G48K)
 * [Python Introduction](https://www.sololearn.com/certificates/CC-QCFKR5CH)
+* [Python Basic](https://www.hackerrank.com/certificates/bee5c312c9ee)
 * [Data Analytics with AI](https://www.sololearn.com/certificates/CC-LZH7VRPT)
 
 #### Engineering & Strategy
