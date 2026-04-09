@@ -12,7 +12,7 @@
 ![NumPy](https://img.shields.io/badge/NumPy-1.26+-blue)
 ![Numba](https://img.shields.io/badge/Numba-0.59+-blue)
 
-> **"Turning Python into a low-level tool: I use LLVM and strong typing to eliminate interpreter overhead, reaching C++ level latency and 100% hardware utilization."**
+> **"Architecting deterministic data pipelines by bridging high-level logic with low-level hardware constraints. Specializing in LLVM IR tuning, branchless logic, and cache-aware memory layouts to achieve near-theoretical hardware throughput"**
 
 ### Instruction-Level Optimization & ASM Orchestration
 * **Asm-Level Surgical Refinement:** Purging costly `.LBB` labels and unconditional branches. I force straight-line execution paths via bitwise masking and **CMOV** to neutralize pipeline stalls and branch misprediction.
