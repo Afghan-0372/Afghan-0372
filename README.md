@@ -75,7 +75,7 @@ Processing 1M+ market ticks with sub-microsecond latency using a Python-based st
 * [ASM Developer Certificate](/certificates/Assembly_EU.pdf)
 * [C++ Advanced](https://www.sololearn.com/certificates/CC-LGYPGAOT)
 * [C++ Introduction](https://www.sololearn.com/certificates/CC-EDVFFIIN)
-* [C Advanced](link)
+* [C Advanced](https://www.sololearn.com/certificates/CC-7D2UJTFP)
 * [C Foundation](/certificates/C_Programming.pdf)
 * [C Introduction](https://www.sololearn.com/certificates/CC-UBOEBCFT)
 * [C# Professional](https://www.sololearn.com/certificates/CC-D7GQNS4N)
