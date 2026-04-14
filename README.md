@@ -1,4 +1,4 @@
-# Maxim Anisimov | Principal Performance Architect
+# Maxim Anisimov | Performance Engineer
 ### High-Frequency Data Pipelines & CPU/GPU-Cycle Optimization
 
 ![Assembly](https://img.shields.io/badge/ASM-x86_64-red)
