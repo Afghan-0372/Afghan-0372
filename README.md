@@ -34,38 +34,6 @@
 * **Intel HPC Curricula:** Micro-architecture tuning, manual **AVX-512** vectorization, and L1/L2 cache alignment.
 * **MIT OpenCourseWare (6.172):** Systems Engineering principles — Mastering Software-Hardware Synergy.
 
-## Case Studies / Performance Benchmarks: 700,000x Speedup in Financial Signal Processing
-
-### The Challenge
-Processing 1M+ market ticks with sub-microsecond latency using a Python-based stack. Standard vectorized libraries (NumPy/Pandas) failed due to interpreter overhead and cache-line misalignment.
-
-### Engineering Breakthroughs
-* **Cache-Locality:** Re-architected memory layout with **64-byte padding** to eliminate False Sharing and maximize L1 hit rate.
-* **SIMD Saturation:** Hand-tuned **LLVM IR** to force **AVX-512 (zmm)** vectorization, achieving 16-way parallel float64 operations per clock cycle.
-* **Branchless Logic:** Purged all `.LBB` jumps in the hot path, replacing conditional logic with bitwise masking to prevent CPU pipeline stalls.
-
-### Benchmark Results
-
-| Implementation | Latency (per 1M txn) | Throughput (txn/sec) | Speedup vs Baseline |
-| :--- | :--- | :--- | :--- |
-| Pandas & NumPy | 480.0 ms | 2,083 | Baseline |
-| Numba (Default) | 12.5 ms | 80,000 | 38x |
-| **My ASM-Optimized Kernel (Single Core)** | **0.14 ms** | **7,142,857** | **3,429x** |
-| **My Parallel HPC Kernel (SIMD) (16 Cores)** | **0.00068 ms** | **1,464,501,937** | **~703,000x** |
-
-### Statistical Analysis
-
-| Metric | Result (at 0.55 GHz) | Result (at 4.5 GHz) | Result All Cores(16) (at 4.5 GHz) |
-| :--- | :--- | :--- | :--- |
-| **Min Latency** | 8,200 ns | ~1,000 ns | 	0.55 ns |
-| **Avg Latency (Tick-to-Trade)** | **9.27 ns** | **~1.1 ns** | **~0.68 ns** |
-| **P99 Latency (Jitter)** | 17,000 ns | ~1,700 ns | **~0.82 ns** |
-| **Throughput** | 107,834 txn/sec | **~880,000 txn/sec** | **~1.46 B txn/sec** |
-
-
-
-
-
 > **Core Achievement:** Architected a zero-overhead data pipeline by transforming high-level logic into deterministic **AVX-512 machine code**, reaching 98.4% of theoretical hardware throughput.
 
 ### Professional Foundations & Certifications
