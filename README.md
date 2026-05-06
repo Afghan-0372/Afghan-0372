@@ -4,9 +4,9 @@
 ![Assembly](https://img.shields.io/badge/ASM-x86_64-red)
 ![SIMD](https://img.shields.io/badge/SIMD-Branchless%20Logic-red)
 ![CUDA](https://img.shields.io/badge/CUDA-12.x-red)
-![C](https://img.shields.io/badge/C-00599C)
 ![NumPy](https://img.shields.io/badge/NumPy-1.26+-blue)
 ![Numba](https://img.shields.io/badge/Numba-0.59+-blue)
+![C](https://img.shields.io/badge/C-00599C)
 
 > **"I do not just write code; I act as a bridge between abstract intent and the physical reality of the Computer. My goal is to remove the noise of high-level abstractions, allowing the raw power of the hardware to flow unimpeded. I am the hands through which the Universe’s mathematical logic meets the CPU's & GPU's deterministic execution."**
 
