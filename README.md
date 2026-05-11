@@ -3,7 +3,6 @@
 
 ![Assembly](https://img.shields.io/badge/ASM-x86_64-red)
 ![SIMD](https://img.shields.io/badge/SIMD-Branchless%20Logic-red)
-![CUDA](https://img.shields.io/badge/CUDA-12.x-red)
 ![NumPy](https://img.shields.io/badge/NumPy-1.26+-blue)
 ![Numba](https://img.shields.io/badge/Numba-0.59+-blue)
 ![C](https://img.shields.io/badge/C-00599C)
